@@ -39,7 +39,7 @@ class InstagramView extends StatelessWidget {
                   builder: (context) => HomeView(
                     token: instagram.authorizationCode.toString(),
                     name: instagram.username.toString(),
-                    userId: instagram.userID.toString(),
+                    userId: instagram.id.toString(),
                   ),
                 ),
               );
