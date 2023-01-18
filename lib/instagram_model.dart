@@ -10,6 +10,7 @@ class InstagramModel {
   String? accessToken;
   String? userID;
   String? username;
+  String? id;
 
   void getAuthorizationCode(String url) {
     authorizationCode = url
@@ -41,6 +42,7 @@ class InstagramModel {
       'username': json.decode(responseNode.body)['username'],
     };
     username = json.decode(responseNode.body)['username'];
+    id = json.decode(responseNode.body)['id'];
     print('username: $username');
     return instaProfile != null ? true : false;
   }
